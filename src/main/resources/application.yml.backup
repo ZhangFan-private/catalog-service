@@ -7,10 +7,14 @@ server:
       max: 50
       min-spare: 5
 
+#      自定义配置
+polar:
+  greeting: Welcome to the local book catalog!
+
 spring:
-  application:
-    name: catalog-service
-  #    应用配置中心配置
+  profiles:
+    active: prod
+#    应用配置中心配置
   config:
     import: "optional:configserver:"
   cloud:
@@ -18,13 +22,12 @@ spring:
       uri: http://localhost:8888
       request-connect-timeout: 5000 # 5s
       request-read-timeout: 5000 # 5s
-      fail-fast: false # In production, set to true
       retry:
         max-attempts: 6
         initial-interval: 1000 # 1s
         max-interval: 2000 # 2s
         multiplier: 1.1
-  # 数据库配置
+# 数据库配置
   datasource:
     username: user
     password: password
@@ -39,6 +42,3 @@ management:
       exposure:
         include: refresh
 
-#      自定义配置
-polar:
-  greeting: Welcome to the local book catalog!
