@@ -8,6 +8,8 @@ server:
       min-spare: 5
   shutdown: graceful
 spring:
+  profiles:
+    active: testdata
   application:
     name: catalog-service
   lifecycle:

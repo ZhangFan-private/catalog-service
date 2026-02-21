@@ -1,0 +1,2 @@
+INSERT INTO "public"."book" ("id", "author", "isbn", "price", "title", "created_date", "last_modified_date", "version", "publisher") VALUES (1, 'Lyra Silverstar', '1234567891', '9.9', 'Northern Lights', '2026-02-21 22:01:29.053546', '2026-02-21 22:01:29.053546', 1, 'Polarsophia');
+INSERT INTO "public"."book" ("id", "author", "isbn", "price", "title", "created_date", "last_modified_date", "version", "publisher") VALUES (2, 'Iorek Polarson', '1234567892', '12.9', 'Polar Journey', '2026-02-21 22:01:29.063057', '2026-02-21 22:01:29.063057', 1, 'Polarsophia');
